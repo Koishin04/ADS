@@ -100,6 +100,9 @@ public class MyArrayList<T> implements MyList<T> {
         size = 0;
     }
 
+
+
+
     @Override
     public java.util.Iterator<T> iterator() {
         return new java.util.Iterator<T>() {
@@ -153,7 +156,17 @@ public class MyArrayList<T> implements MyList<T> {
     }
     @Override
     public void sort() {
-        Arrays.sort(elements);
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = 0; j < size - i - 1; j++) {
+                // Здесь мы работаем только в пределах size,
+                // так что elements[j] точно не null
+                if (((Comparable<T>) elements[j]).compareTo((T) elements[j + 1]) > 0) {
+                    T temp = (T) elements[j];
+                    elements[j] = elements[j + 1];
+                    elements[j + 1] = temp;
+                }
+            }
+        }
     }
 }
 
