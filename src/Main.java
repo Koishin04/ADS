@@ -1,72 +1,24 @@
-package src;
-
-import src.Array_List.implementations.MyArrayList;
-import src.Array_List.implementations.MyLinkedList;
-import src.Array_List.structures.MyStack;
-import src.Array_List.structures.MyQueue;
-import src.Array_List.structures.MyMinHeap;
+import src.HashTable_BST.MyHashTable;
+import src.HashTable_BST.MyTestingClass;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        MyArrayList<Integer> list = new MyArrayList<>();
-        System.out.println("MyArrayList");
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        // Создаем таблицу
+        MyHashTable<MyTestingClass, String> table = new MyHashTable<>(11);
+        Random rnd = new Random();
+
+        // Добавляем 10 000 элементов
+        for (int i = 0; i < 10000; i++) {
+            MyTestingClass key = new MyTestingClass(
+                    rnd.nextInt(1000000),
+                    "FirstName" + rnd.nextInt(1000),
+                    "LastName" + rnd.nextInt(1000)
+            );
+            table.put(key, "Student" + i);
         }
-        list.add(10);
-        list.add(20);
-        list.add(5);
-        list.addFirst(100);
-        System.out.println("ArrayList content: " + java.util.Arrays.toString(list.toArray()));
-        System.out.println("ArrayList size: " + list.size());
-        System.out.println("Element at index 1: " + list.get(1));
-        list.sort();
-        System.out.println("Sorted ArrayList: " + list.get(0) + ", " + list.get(1));
 
-        MyLinkedList<String> linkedList = new MyLinkedList<>();
-        System.out.println("");
-        System.out.println("MyLinkedList");
-        linkedList.add("Apple");
-        linkedList.add("Banana");
-        linkedList.addFirst("Cherry");
-        System.out.println("LinkedList content: " + java.util.Arrays.toString(linkedList.toArray()));
-        System.out.println("LinkedList size: " + linkedList.size()); // Ожидаем 3
-        System.out.println("First element: " + linkedList.getFirst()); // Ожидаем Cherry
-        linkedList.removeLast();
-        System.out.println("Exists 'Banana'? " + linkedList.exists("Banana")); // Ожидаем false после удаления
-
-
-        System.out.println("");
-        System.out.println("MyStack");
-        MyStack<Integer> stack = new MyStack<>();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        System.out.println("Stack peek: " + stack.peek());
-        System.out.println("Stack pop: " + stack.pop());
-
-
-
-        System.out.println("");
-        System.out.println("MyQueue");
-        MyQueue<String> queue = new MyQueue<>();
-        queue.enqueue("First");
-        queue.enqueue("Second");
-        System.out.println("Queue peek: " + queue.peek());
-        System.out.println("Queue dequeue: " + queue.dequeue());
-
-
-
-
-        System.out.println("");
-        System.out.println("MyMinHeap");
-        MyMinHeap<Integer> heap = new MyMinHeap<>();
-        heap.insert(50);
-        heap.insert(10);
-        heap.insert(30);
-        heap.insert(5);
-        System.out.println("MinHeap size: " + heap.size());
-        System.out.println("Min element: " + heap.extractMin());
-        System.out.println("Next min: " + heap.extractMin());
+        // Проверяем распределение
+        table.printBucketSizes();
     }
 }
