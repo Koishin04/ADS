@@ -1,6 +1,4 @@
-package src.interfaces;
-
-import src.structures.MyMinHeap;
+package src.Array_List.interfaces;
 
 public interface MyList<T> extends  Iterable<T> {
     void add(T item);

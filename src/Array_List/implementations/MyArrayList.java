@@ -1,8 +1,6 @@
-package src.implementations;
+package src.Array_List.implementations;
 
-import src.interfaces.MyList;
-
-import java.util.Arrays;
+import src.Array_List.interfaces.MyList;
 
 public class MyArrayList<T> implements MyList<T> {
     private Object[] elements;
@@ -52,8 +50,6 @@ public class MyArrayList<T> implements MyList<T> {
     public void add(int index, T item) {
         if (index < 0 || index > size) throw new IndexOutOfBoundsException();
         if (size == elements.length) increaseBuffer();
-
-        // Сдвигаем элементы вправо, освобождая место
         for (int i = size; i > index; i--) {
             elements[i] = elements[i - 1];
         }
@@ -99,6 +95,7 @@ public class MyArrayList<T> implements MyList<T> {
         elements = new Object[10];
         size = 0;
     }
+
 
 
 
@@ -158,15 +155,14 @@ public class MyArrayList<T> implements MyList<T> {
     public void sort() {
         for (int i = 0; i < size - 1; i++) {
             for (int j = 0; j < size - i - 1; j++) {
-                // Здесь мы работаем только в пределах size,
-                // так что elements[j] точно не null
-                if (((Comparable<T>) elements[j]).compareTo((T) elements[j + 1]) > 0) {
+                if ((   (Comparable<T>) elements[j]).compareTo((T) elements[j + 1]) > 0) {
                     T temp = (T) elements[j];
                     elements[j] = elements[j + 1];
                     elements[j + 1] = temp;
                 }
             }
         }
+
     }
 }
 

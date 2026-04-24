@@ -1,0 +1,6 @@
+ADS - Algorithms and Data Structures |
+teacher := Azimbayev Baurzhan Now we are learning about Physical Data Stracture array and linked list
+
+so we are coding in Java , i think it will be good period of learning this course 💯
+
+so let's learn together!

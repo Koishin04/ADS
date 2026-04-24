@@ -1,5 +1,5 @@
-package src.structures;
-import src.implementations.MyArrayList;
+package src.Array_List.structures;
+import src.Array_List.implementations.MyArrayList;
 
 public class MyMinHeap<T extends Comparable<T>> {
     private MyArrayList<T> list;

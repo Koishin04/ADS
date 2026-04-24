@@ -1,6 +1,6 @@
-package src.structures;
+package src.Array_List.structures;
 
-import src.implementations.MyArrayList;
+import src.Array_List.implementations.MyArrayList;
 
 public class MyStack<T> {
     private MyArrayList<T> myList;

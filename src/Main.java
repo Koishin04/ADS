@@ -1,10 +1,10 @@
 package src;
 
-import src.implementations.MyArrayList;
-import src.implementations.MyLinkedList;
-import src.structures.MyStack;
-import src.structures.MyQueue;
-import src.structures.MyMinHeap;
+import src.Array_List.implementations.MyArrayList;
+import src.Array_List.implementations.MyLinkedList;
+import src.Array_List.structures.MyStack;
+import src.Array_List.structures.MyQueue;
+import src.Array_List.structures.MyMinHeap;
 
 public class Main {
     public static void main(String[] args) {

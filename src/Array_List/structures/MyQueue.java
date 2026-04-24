@@ -1,6 +1,6 @@
-package src.structures;
+package src.Array_List.structures;
 
-import src.implementations.MyLinkedList;
+import src.Array_List.implementations.MyLinkedList;
 
 public class MyQueue<T> {
     private MyLinkedList<T> myLinkedList;

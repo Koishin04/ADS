@@ -1,6 +1,6 @@
-package src.implementations;
+package src.Array_List.implementations;
 
-import src.interfaces.MyList;
+import src.Array_List.interfaces.MyList;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -166,7 +166,6 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void sort() {
-        // Пузырьковая сортировка для примера (требует Comparable)
         if (size > 1) {
             for (int i = 0; i < size - 1; i++) {
                 MyNode current = head;

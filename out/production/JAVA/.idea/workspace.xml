@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="675e415d-00f0-40ec-af2a-bb41a931200b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/HashTable_BST/MyHashTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/asik.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/implementations/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Array_List/implementations/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/implementations/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Array_List/implementations/MyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Array_List/interfaces/MyList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/structures/MyMinHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Array_List/structures/MyMinHeap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/structures/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Array_List/structures/MyQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/structures/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Array_List/structures/MyStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/implementations/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementations/MyArrayList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,23 +45,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.asik.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Koishin B/Desktop/JAVA&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.asik.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Koishin B/Desktop/JAVA",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Koishin B\Desktop\JAVA" />
