@@ -1,3 +1,5 @@
+package src.HashTable_BST;
+
 public class MyHashTable<K, V> {
 
     private class HashNode<K, V> {
