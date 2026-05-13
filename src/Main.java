@@ -1,37 +1,37 @@
-import src.HashTable_BST.BST;
-import src.HashTable_BST.MyHashTable;
-import src.HashTable_BST.MyTestingClass;
-import java.util.Random;
+package src.Graphs;
 
 public class Main {
     public static void main(String[] args) {
-        MyHashTable<MyTestingClass, String> table = new MyHashTable<>(11);
-        Random rnd = new Random();
+        WeightedGraph<String> graph = new WeightedGraph<>(true);
 
-        for (int i = 0; i < 10000; i++) {
-            MyTestingClass key = new MyTestingClass(
-                    rnd.nextInt(1000000),
-                    "FirstName" + rnd.nextInt(1000),
-                    "LastName" + rnd.nextInt(1000)
-            );
-            table.put(key, "Student" + i);
-        }
+        graph.addEdge("Almaty", "Astana", 2.0);
+        graph.addEdge("Almaty", "Shymkent", 5.0);
+        graph.addEdge("Astana", "Shymkent", 1.0);
+        graph.addEdge("Astana", "Kostanay", 4.0);
+        graph.addEdge("Shymkent", "Kyzyloorda", 3.0);
+        graph.addEdge("Kostanay", "Kyzyloorda", 1.0);
 
-        table.printBucketSizes();
+        System.out.println("--- Breadth First Search Execution ---");
+        Search<String> bfs = new BreadthFirstSearch<>(graph, "Almaty");
+        Vertex<String> destination = graph.getVertex("Kyzyloorda");
+        printPath(bfs, destination);
 
+        System.out.println("\n--- Dijkstra's Algorithm Execution ---");
+        DijkstraSearch<String> dijkstra = new DijkstraSearch<>(graph, "Almaty");
+        printPath(dijkstra, destination);
+        System.out.println("Total Shortest Path Cost: " + dijkstra.getDistanceTo(destination));
+    }
 
-
-
-        BST<Integer, String> tree = new BST<>();
-        tree.put(5, "Five");
-        tree.put(3, "Three");
-        tree.put(8, "Eight");
-        tree.put(1, "One");
-        tree.put(4, "Four");
-
-        System.out.println("Tree size: " + tree.size());
-        for (var elem : tree) {
-            System.out.println("key is " + elem.getKey() + " and value is " + elem.getValue());
+    private static <V> void printPath(Search<V> search, Vertex<V> destination) {
+        if (search.hasPathTo(destination)) {
+            System.out.print("Path found: ");
+            Iterable<Vertex<V>> path = search.pathTo(destination);
+            for (Vertex<V> vertex : path) {
+                System.out.print(vertex + " -> ");
+            }
+            System.out.println("End");
+        } else {
+            System.out.println("No reachable path exists.");
         }
     }
 }
